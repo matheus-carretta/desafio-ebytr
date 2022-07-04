@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import fetchApi from '../utils/api';
-import TaskListItem from './TaskListItem';
+import TableData from './TableData';
 
 function Body() {
   const [task, setTask] = useState({});
@@ -15,10 +15,19 @@ function Body() {
   }, []);
 
   return (
-    <main className="App">
-      <ul>
-        {task.length > 0 ? task.map((task) => <TaskListItem task={task} key={task.id} />) : ''}
-      </ul>
+    <main className='content'>
+      <table className='rTable'>
+        <thead>
+          <tr> 
+            <th>Descrição:</th>
+            <th>Status:</th>
+            <th>Opções:</th>
+          </tr>
+        </thead>
+        <tbody>
+          {task.length > 0 ? task.map((task) => <TableData task={task} key={task.id} />) : ''}
+        </tbody>
+      </table>
     </main>
   );
 }
