@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/server.js",
     "test": "mocha tests/**/*.test.js --exit",
+    "coverage": "nyc mocha tests/**/*.test.js --exit",
+    "dev": "nodemon src/server.js",
     "prestart": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize db:seed:all"
   },
   "keywords": [],
@@ -23,6 +23,7 @@
     "chai-http": "^4.3.0",
     "mocha": "^10.0.0",
     "nodemon": "^2.0.18",
+    "nyc": "^15.1.0",
     "sequelize-cli": "^6.4.1",
     "sinon": "^14.0.0"
   }
