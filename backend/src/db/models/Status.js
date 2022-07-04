@@ -6,15 +6,16 @@ module.exports = (sequelize, DataTypes) => {
       name: DataTypes.STRING,
     },
     {
+      tablename: 'Status',
       timestamps: false,
       underscored: true,
     },
   );
 
   Status.associate = (models) => {
-    Status.hasOne(
+    Status.hasMany(
       models.Task,
-      { foreignKey: 'statusId', as: 'tasks' },
+      { foreignKey: 'statusId', as: 'Tasks' },
     );
   };
 

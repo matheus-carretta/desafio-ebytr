@@ -1,5 +1,5 @@
 module.exports = {
-  up: async (queryInterface, Sequelize) => queryInterface.createTable('Tasks', {
+  up: async (queryInterface, Sequelize) => queryInterface.createTable('tasks', {
     id: {
       allowNull: false,
       autoIncrement: true,
@@ -17,7 +17,7 @@ module.exports = {
       onDelete: 'CASCADE',
       field: 'status_id',
       references: {
-        model: 'Statuses',
+        model: 'statuses',
         key: 'id',
       },
     },

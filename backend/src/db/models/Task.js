@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       statusId: { type: DataTypes.INTEGER, foreignKey: true },
     },
     {
+      tablename: 'Task',
       timestamps: false,
       underscored: true,
     },
