@@ -22,8 +22,15 @@ const destroy = async (id) => {
   return response;
 };
 
+const update = async (description, status, id) => {
+  const response = await Task.update({ description, status }, { where: { id } });
+
+  return response;
+};
+
 module.exports = {
   getAll,
   create,
   destroy,
+  update,
 };

@@ -4,7 +4,7 @@ const taskController = require('../controllers/taskController');
 
 const taskRoute = express.Router();
 
-taskRoute.put('/:id', (req, res) => res.send(req));
+taskRoute.put('/:id', taskController.update);
 
 taskRoute.delete('/:id', taskController.destroy);
 
