@@ -6,7 +6,7 @@ const taskRoute = express.Router();
 
 taskRoute.put('/:id', (req, res) => res.send(req));
 
-taskRoute.delete('/:id', (req, res) => res.send(req));
+taskRoute.delete('/:id', taskController.destroy);
 
 taskRoute.get('/', taskController.getAll);
 

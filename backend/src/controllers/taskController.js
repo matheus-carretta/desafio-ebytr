@@ -13,7 +13,15 @@ const create = async (req, res) => {
   return res.status(201).json(response);
 };
 
+const destroy = async (req, res) => {
+  const { id } = req.params;
+  await taskService.destroy(id);
+
+  return res.status(204).json();
+};
+
 module.exports = {
   getAll,
   create,
+  destroy,
 };
