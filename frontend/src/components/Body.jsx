@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import fetchApi from '../utils/api';
+import TaskListItem from './TaskListItem';
 
 function Body() {
   const [task, setTask] = useState({});
@@ -15,7 +16,9 @@ function Body() {
 
   return (
     <main className="App">
-      <h1>Teste!</h1>
+      <ul>
+        {task.length > 0 ? task.map((task) => <TaskListItem task={task} key={task.id} />) : ''}
+      </ul>
     </main>
   );
 }
