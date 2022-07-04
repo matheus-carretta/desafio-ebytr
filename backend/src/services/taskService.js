@@ -10,6 +10,13 @@ const getAll = async () => {
   return response;
 };
 
+const create = async (description, statusId) => {
+  const response = await Task.create({ description, statusId });
+
+  return response;
+};
+
 module.exports = {
   getAll,
+  create,
 };

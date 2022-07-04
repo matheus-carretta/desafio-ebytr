@@ -10,6 +10,6 @@ taskRoute.delete('/:id', (req, res) => res.send(req));
 
 taskRoute.get('/', taskController.getAll);
 
-taskRoute.post('/', (req, res) => res.send(req));
+taskRoute.post('/', taskController.create);
 
 module.exports = taskRoute;
