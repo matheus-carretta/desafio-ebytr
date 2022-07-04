@@ -10,10 +10,10 @@ body {
   width: 100vw;
 }
 /* https://www.webdesignemfoco.com/cursos/css/tabelas-responsivas-em-html5-e-css */
-.rTable{width: 100%; text-align: center;}
+.rTable{width: 80%; text-align: center; margin: 0 auto;}
     .rTable thead{background: black; font-weight: bold; color:#fff;}
-    .rTable tbody tr:nth-child(2n){background: #ccc;}
-    .rTable th , .rTable td{padding: 7px 0;}
+    .rTable tbody tr:nth-child(2n){background: #ccc; }
+    .rTable th , .rTable td{padding: 7px 0; box-shadow: 0 1px 4px rgb(0 0 0 / 10%); font-size: 1.2em;}
 
 @media screen and (max-width: 480px){
     .content{width: 94%;}
@@ -29,4 +29,31 @@ body {
     .rTable tbody tr td:nth-child(3){width:20%;}
     .rTable tbody tr td:nth-child(4){width:10%;}
     .rTable tbody tr td:nth-child(5){width:30%;}
+}
+
+h1 > span {
+  font-size: 2em;
+  text-shadow: 2px 2px 2px black;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > h1 {
+  padding: 0.2em;
+}
+
+.title1 {
+  color:black;
+}
+
+.title2, .title4 {
+  color: #ccc;
+}
+
+.title3, .title5 {
+  color: #fff;
 }
