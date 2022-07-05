@@ -86,3 +86,40 @@ button:hover {
 img {
   width: 40px;
 }
+
+.add-container {
+  width: 80%;
+  margin: 10px auto;
+  padding: 1em;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+
+.add-container > input {
+  outline: none;
+  width: 50%;
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.add-container > select {
+  outline: none;
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.add-container > button {
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #fff;
+}
