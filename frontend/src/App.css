@@ -57,3 +57,32 @@ header > h1 {
 .title3, .title5 {
   color: #fff;
 }
+
+td  > button {
+  margin-right: 0.5em;
+  background-color: transparent;
+  height: 100%;
+  padding: 10px;
+  color: white;
+  font-weight: 800;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  border-radius: 2px;
+}
+
+.update-btn {
+  border: 1px solid #08591E;
+  background-color: #08591E;
+}
+
+.delete-btn {
+  border: 1px solid #D63B2E;
+  background-color: #D63B2E;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+img {
+  width: 40px;
+}
