@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import fetchApi from '../utils/api';
+import { fetchApi } from '../utils/api.js';
 import TableData from './TableData';
 
 function Body() {
@@ -25,7 +25,7 @@ function Body() {
           </tr>
         </thead>
         <tbody>
-          {task.length > 0 ? task.map((task) => <TableData task={task} key={task.id} />) : ''}
+          {task.length > 0 ? task.map((task) => <TableData task={task} setTask={setTask} key={task.id} />) : ''}
         </tbody>
       </table>
     </main>
