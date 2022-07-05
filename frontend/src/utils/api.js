@@ -1,7 +1,16 @@
+const deleteItem = async (id) => {
+  await fetch(`http://localhost:3002/${id}`, {
+    method: 'DELETE'
+  });
+}
+
 const fetchApi = async () => {
-  const response = await fetch('http://localhost:3002/');
+  const response = await fetch(`http://localhost:3002/`);
   const data = await response.json();
   return data;
 }
 
-export default fetchApi;
+module.exports = {
+  fetchApi,
+  deleteItem,
+} 
