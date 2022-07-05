@@ -15,6 +15,7 @@ function Body() {
  const createItem = async () => {
   await postItem(description, status);
   setTask(await fetchApi());
+  setDescription('');
  }
 
   useEffect(() => {
@@ -30,7 +31,7 @@ function Body() {
           <option value={2}>Em andamento</option>
           <option value={3}>Concluído</option>
         </select>
-        <button type='button' onClick={() => createItem()}>Adicionar</button>
+        <button type='button' disabled={description === ''} onClick={() => createItem()}>Adicionar</button>
       </div>
       <table className='rTable'>
         <thead>

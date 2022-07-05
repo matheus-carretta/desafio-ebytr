@@ -123,3 +123,7 @@ img {
   border-radius: 20px;
   background-color: #fff;
 }
+
+.add-container > button:disabled {
+  cursor: inherit;
+}
