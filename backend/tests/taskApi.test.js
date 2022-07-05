@@ -99,7 +99,7 @@ describe('Task API Test', () => {
       Task.update.restore();
     });
 
-    it('return status 204 and have no body', async () => {
+    it('return status 204 and a body with an array with changes quantity', async () => {
       const response = await chai.request(app).put(`/:${taskId}`).send(taskMock);
 
       expect(response).to.have.status(200);
