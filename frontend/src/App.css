@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box
+}
+
+body {
+  background-color: #F5F5F5;
+  width: 100vw;
+}
+/* https://www.webdesignemfoco.com/cursos/css/tabelas-responsivas-em-html5-e-css */
+.rTable{width: 80%; text-align: center; margin: 0 auto;}
+    .rTable thead{background: black; font-weight: bold; color:#fff;}
+    .rTable tbody tr:nth-child(2n){background: #ccc; }
+    .rTable th , .rTable td{padding: 7px 0; box-shadow: 0 1px 4px rgb(0 0 0 / 10%); font-size: 1.2em;}
+
+@media screen and (max-width: 480px){
+    .content{width: 94%;}
+
+    .rTable thead{display:none;}
+    .rTable tbody td{display: flex; flex-direction: column; }
+}
+
+@media only screen and (min-width: 1200px){
+    .content{width:100%;}
+    .rTable tbody tr td:nth-child(1){width:10%;}
+    .rTable tbody tr td:nth-child(2){width:30%;}
+    .rTable tbody tr td:nth-child(3){width:20%;}
+    .rTable tbody tr td:nth-child(4){width:10%;}
+    .rTable tbody tr td:nth-child(5){width:30%;}
+}
+
+h1 > span {
+  font-size: 2em;
+  text-shadow: 2px 2px 2px black;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > h1 {
+  padding: 0.2em;
+}
+
+.title1 {
+  color:black;
+}
+
+.title2, .title4 {
+  color: #ccc;
+}
+
+.title3, .title5 {
+  color: #fff;
+}
+
+td  > button {
+  margin-right: 0.5em;
+  background-color: transparent;
+  height: 100%;
+  padding: 10px;
+  color: white;
+  font-weight: 800;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  border-radius: 2px;
+}
+
+.update-btn {
+  border: 1px solid #08591E;
+  background-color: #08591E;
+}
+
+.delete-btn {
+  border: 1px solid #D63B2E;
+  background-color: #D63B2E;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+img {
+  width: 40px;
+}
+
+.add-container {
+  width: 80%;
+  margin: 10px auto;
+  padding: 1em;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+
+.add-container > input {
+  outline: none;
+  width: 50%;
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.add-container > select {
+  outline: none;
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.add-container > button {
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #fff;
+}
